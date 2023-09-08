@@ -1,0 +1,763 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root {
+    --bgOrange: #e84949;
+  }
+  
+
+.wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container1{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.navi{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 1.1rem;
+    
+}
+.name{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    padding-left: ;
+    padding-bottom: 1rem;
+}
+.logo{
+    width: 6rem;
+    height: 6rem;
+    animation-name: logrot;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    
+}
+.name-text{
+    margin-left: -1.8rem;
+    font-size: 1.4rem;
+}
+.content{
+    display: flex;
+    gap: 3rem;
+    color: solid black;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+    transition: scroll-behaviour 4s ease-in-out;
+}
+.content a{
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+.content a:hover{
+    transform: scale(1.1);
+    transition: all 0.6s;
+}
+@keyframes logrot {
+    0%{
+        transform: rotateY(0deg) translateY(0px);
+    }
+    50%{
+        transform: rotateY(180deg) translateY(-2px);
+    }
+    100%{
+        transform: translateY(360deg) translateY(0px);
+    }
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+}
+.aj{
+    user-select: none;
+    font-size: 6rem;
+    color: rgb(231,231,231);
+    position: absolute;
+    bottom: -16%;
+    left: -7%;
+    font-weight: bold;
+    transition: all 3s;
+}
+.hero-left{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+.hero-heading{
+    font-size: 35px;
+    color:#343d68;
+    font-weight: 500;
+}
+.role{
+    color: #4e45d5;
+    font-weight: 800;
+}
+.hero-subheading{
+    font-size: 45px;
+    line-height: 45px;
+}
+.hero-desc{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+.btn{
+    position: relative;
+    width: 6rem;
+    height: 1.8rem;
+    background-color: #e84949;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 0.8rem;
+    z-index: 1;
+    
+}
+.up{
+    z-index: 2;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    transform: scaleX(0);
+    transition: all 1s linear;
+    transform-origin: left;
+    z-index: 0;
+}
+.btn:hover::before{
+    transform: scaleX(1);
+}
+.btn:active{
+    transition: all 0.5s;
+    transform: scale(0.9);
+    box-shadow: 0 0 10px 3px #0000003f;
+}
+
+
+.hero-right{
+    position: relative;
+  
+}
+.img1{
+   width: 16vw;
+   height: 45vh;
+  
+}
+.photo{
+    position: relative;
+    filter: grayscale(1);
+    padding: 2.5rem;
+    
+    animation: scaleimg 4s linear infinite;
+
+    
+}
+@keyframes scaleimg {
+    0%{
+        filter: grayscale(0);
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(1);
+        box-shadow: 3px 3px 10px black;
+    }
+    100%{
+        transform: scale(1);
+        filter: grayscale(0);
+    }
+    
+}
+.circ{
+    width: 3rem;
+    height: 3rem;
+}
+.circle{
+    position: absolute;
+    bottom: -1em;
+    right: 0;
+    animation: tr 6s ease-in infinite;
+    
+}
+@keyframes tr {
+    0%{
+        transform: translate3d(0 ,0 , 0);
+    }
+    20%{
+        transform: translate3d(-0.7rem, 0.7rem, 0.7rem);
+    }
+    40%{
+        transform: translate3d(0 ,-0.7rem, 0rem);
+    }
+    50%{
+        transform: translate3d(0.4rem, 0rem, 0.4rem);
+    }
+    70%{
+        transform: translate3d(-0.7rem, 0.7rem, -0.7rem);
+    }
+    100%{
+        transform: translate3d(0 ,0 ,0);
+    }
+}
+.cube{
+    position: absolute;
+    top: -0.8em;
+    right: 2.5rem;
+    animation: rot 6s infinite;
+}
+@keyframes rot {
+    0%{
+        transform: rotateY(0deg) translateX(0);
+    }
+    50%{
+        transform: rotateY(180deg) translateX(1rem);
+    }
+    100%{
+        transform: rotateY(360deg) translateX(0);
+    }
+}
+.rain{
+    width: 4rem;
+    height: 4rem;
+}
+.raincircle{
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    animation: ro 7s infinite;
+}
+@keyframes ro {
+    0%{
+        transform: rotateY(0deg) translateX(0) translateY(0);
+    }
+    20%{
+        transform: rotateY(90deg) translateX(1rem) translateY(-0.8rem);
+    }
+    40%{
+        transform: rotateY(0deg) translateX(0) translateY(0);
+    }
+    60%{
+        transform: rotateY(-90deg) translateX(1rem) translateY(-0.8rem);
+    }
+    80%{
+        transform: rotateY(180deg) translateX(-0.5rem) translateY(1rem);
+    }
+    100%{
+        transform: rotateY(360deg) translateX(0) translateY(0);
+    }
+}
+.lig{
+    width: 3rem;
+    height: 4rem;
+}
+.light{
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: rotra 5s infinite;
+}
+@keyframes rotra {
+    0%{
+        transform: translateX(0) translateY(0);
+    }
+    50%{
+        transform: translateX(0.8rem) translateY(-0.8rem);
+    }
+    
+}
+.container2{
+    background-color: rgb(231,231,231);
+    margin-top:4rem;
+}
+.cont-heading{
+    color: var(--bgOrange);
+    font-size:90px;
+    text-align:center;
+    padding-top:30px;
+
+}
+.project{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:3rem 0;
+    position: relative;
+    display:flex;
+    flex-direction:column;
+    gap:120px;
+}
+.proj-card{
+    width: 90%;
+    height: 550px;
+    background-image: url(./project/discord.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow:0px 0px 40px #1f1f1f;
+}
+.proj-right{
+    margin-left: 10%;
+}
+.proj-card::after{
+    content: "";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #1f1f1f9a;
+    z-index:0;
+}
+.proj-card::before{
+    content: "";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index: 0;
+}
+.proj-card:hover::before{
+    transform: scaleX(1);
+}
+.proj-num{
+    position:absolute;
+    font-size:200px;
+    font-weight:600;
+    color:white;
+    z-index:10;
+    /* display:none; */
+    opacity: 0;
+  }
+  .proj-card:hover .proj-num{
+    opacity: 1;
+  }
+  .proj-num-right{
+    right:-40px;
+    top:-45px;
+  }
+  .proj-num-left{
+    left:-40px;
+    top:-45px;
+  }
+
+.proj-container{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    color:white;
+    padding:2em;
+    bottom:20%;
+    z-index:5;
+    gap:1em;
+    transition:all 0.4s;
+
+}
+.proj-cont-left{
+    left: 10%;
+}
+.proj-cont-right{
+    right:10%;
+}
+.skill-img{
+    width:60%;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.logo-img{
+    width: 35px;
+    height: 35px;
+}
+.proj-head{
+    font-size:50px;
+    font-weight: bold;
+    line-height:3rem;
+
+}
+.proj-desc{
+    width:70%;
+    font-size:16px;
+    font-style: italic;
+}
+.proj-btn{
+    display: flex;
+    gap:0.9rem;
+    align-items:center;
+
+}
+.proj-btn a{
+    color: white;
+    cursor:pointer;
+    font-size:20px;
+    transition:all 0.4s;
+}
+.proj-btn a:hover{
+    color: var(--bgOrange);
+}
+.proj-card:hover .proj-container{
+    transform: scale(1.1);
+}
+#project2{
+    background-image: url(./project/razorpay.png);
+}
+.skill{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.skill-cont{
+    z-index: 0;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13rem;
+}
+.skills-img{
+    width: 5rem;
+    height: 5rem;
+    transition: all 0.5s;
+}
+.skill-right{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    
+    gap: 1rem;
+    row-gap: 2rem;
+    
+}
+.skill-left{
+    width: 50%;
+}
+.skill-left-head{
+    font-size: 2.8rem;
+    color: var(--bgOrange);
+    margin-bottom: 2rem;
+}
+.m_cap{
+    font-size: 4rem;
+}
+.skill-left-subhead p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.3rem;
+    
+}
+.skill-faded{
+    z-index: 1;
+    user-select: none;
+    font-size: 6rem;
+    color: rgb(231,231,231);
+    position: absolute;
+    bottom:-11.5rem;
+    right: 2%;
+    font-weight: bold;
+    transition: all 3s;
+}
+.skills-img:hover{
+    transform: scale(1.1);
+}
+.anima{
+    width: 100%;
+    z-index: -6;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: calc(0% + -10rem);
+    
+}
+.ball{
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgb(231,231,231);
+}
+.ball1{
+    animation: aj 4s 0s linear infinite;
+    
+}
+.ball2{
+    animation: aj 4s 0.2s linear infinite;
+    
+}
+.ball3{
+    animation: aj 4s 0.4s linear infinite;
+    
+}
+.ball4{
+    animation: aj 4s 0.6s linear infinite;
+    
+}
+.ball5{
+    animation: aj 4s 0.8s linear infinite;
+    
+    
+}
+.ball6{
+    animation: aj 4s 1s linear infinite;
+    
+}
+.ball7{
+    animation: aj 4s 1.2s linear infinite;
+    
+}
+.ball8{
+    animation: aj 4s 1.4s linear infinite;
+    
+}
+.ball9{
+    animation: aj 4s 1.6s linear infinite;
+    
+}
+.ball10{
+    animation: aj 4s 1.8s linear infinite;
+    
+}
+.ball11{
+    animation: aj 4s 2s linear infinite;
+    
+}
+.ball12{
+    animation: aj 4s 2.2s linear infinite;
+    
+}
+.anime{
+    width: 100%;
+    z-index: -6;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: calc(0% - 10rem);
+}
+.ball23{
+    animation: aj1 4s 0s linear infinite;
+    
+}
+.ball24{
+    animation: aj1 4s 0.2s linear infinite;
+    
+}
+.ball13{
+    animation: aj1 4s 0.4s linear infinite;
+    
+}
+.ball14{
+    animation: aj1 4s 0.6s linear infinite;
+    
+}
+.ball15{
+    animation: aj1 4s 0.8s linear infinite;
+    
+}
+.ball16{
+    animation: aj1 4s 1s linear infinite;
+
+}
+.ball17{
+    animation: aj1 4s 1.2s linear infinite;
+
+}
+.ball18{
+    animation: aj1 4s 1.4s linear infinite;
+
+}
+.ball19{
+    animation: aj1 4s 1.6s linear infinite;
+    
+}
+.ball20{
+    animation: aj1 4s 1.8s linear infinite;
+   
+}
+.ball21{
+    animation: aj1 4s 2s linear infinite;
+    
+}
+.ball22{
+    animation: aj1 4s 2.2s linear infinite;
+    
+}
+
+
+
+@keyframes aj{
+    50%{
+        transform: translateY(-100vh) scale(1.1);
+        opacity: 0;
+    }
+}
+@keyframes aj1{
+    50%{
+        transform: translateY(100vh) scale(1.1);
+        opacity: 0;
+        
+    }
+}
+.btn1{
+    width: 9rem;
+    font-size: 0.8rem;
+}
+.btn1 p{
+    padding-right: 0.6rem;
+}
+.contact{
+    width: 100%;
+    background-color: rgb(231,231,231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    
+}
+.contact-sub{
+    max-width: 1200px;
+    position: relative;
+}
+.contact-sub h1{
+    color: var(--bgOrange);
+    font-size: 3.5rem;
+    font-weight: 400;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.contact-sub h2{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #343d68aa;
+    text-transform: capitalize;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.form{
+    display: flex;
+    justify-content: end;
+}
+.form1{
+    padding-top: 2.5rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+.temp{
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: 0;
+    border-radius: 0.2rem;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.5);
+}
+.temp:focus{
+    border: 0px solid black;
+    outline-style: solid;
+    outline-color: gray;
+
+}
+.mess{
+    
+    border: 1px solid #343d68aa;
+    margin-bottom: 2rem;
+}
+.footer{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: #343d68;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.lastp{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    color: white;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: rgba(231,231,231,0.3);
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+.bind a{
+    color: white;
+}
+.bind{
+    font-size: 1rem;
+    display: flex;
+    gap: 2rem;
+}
+.licon {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+.licon a i{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
